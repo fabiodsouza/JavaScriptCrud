@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Crud</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <form autocomplete="off" onsubmit="submeterForm()">
+            <div>
+              <label for="nomeComp"><p>Nome Completo</p></label>
+              <input
+                type="text"
+                name="nomeComp"
+                id="nomeComp"
+                placeholder="Digite seu nome"
+              />
+            </div>
+            <div>
+              <label for="idade"><p>Idade</p></label>
+              <input
+                type="number"
+                name="idade"
+                id="idade"
+                placeholder="Digite sua idade"
+              />
+            </div>
+            <div>
+              <label for="salario"><p>Salário</p></label>
+              <input
+                type="number"
+                format="currency"
+                id="salario"
+                name="salario"
+                class="form-control"
+                formControlName="salario"
+                placeholder="Digite seu salario"
+              />
+            </div>
+            <div>
+              <label for="cidade"><p>Cidade</p></label>
+              <input
+                type="text"
+                name="cidade"
+                id="cidade"
+                placeholder="Digite sua cidade"
+              />
+            </div>
+            <div class="form_action--button">
+              <input type="submit" value="Salvar" />
+              <input type="reset" value="Apagar" />
+            </div>
+          </form>
+        </td>
+        <td>
+          <table class="list" id="listaEmpregados">
+            <thead>
+              <tr>
+                <th>Nome Completo</th>
+                <th>Idade</th>
+                <th>Salário</th>
+                <th>Cidade</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <script src="main.js"></script>
+  </body>
+</html>
